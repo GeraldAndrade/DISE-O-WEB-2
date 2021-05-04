@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 3</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="panel">
+        <div>
+            <div class="contenedor">
+                <center><h2>EJERCICIO 1</h2></center>
+                <br>
+                <form action="">
+                    <input id="numero1" type="text">
+                    <p>+</p>
+                    <input id="numero2" type="text">
+                    <p>=</p>
+                    <input id="resultado" type="text" readonly>
+                    <input id="par || impar" type="text">
+                    <input type="button" class="btn" onclick="sumar()" value="RESULTADO">
+        
+                </form>
+            </div>
+            <script>
+                function sumar(numero1,numero2)
+                {
+                    var num1 = parseFloat(document.getElementById('numero1').value);
+                    var num2 = parseFloat(document.getElementById('numero2').value);
+                    var P = ("ES PAR");
+                    var I = ("ES IMPAR");
+                    var res1 = num1 + num2;
+                    document.getElementById('resultado').value = res1;
+                    if(res1%2===0)
+                    {
+                        document.getElementById('par || impar').value = P;
+                    }else{
+                        document.getElementById('par || impar').value = I;
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="contenedor">
+            <center><h2>EJERCICIO 2</h2></center>
+            <form class="textos" action="">
+                <input id="numero1" type="text">
+    
+                <input id="numero2" type="text">
+    
+                <input id="numero3" type="text"><br>
+    
+                <input type="button" class="btn" onclick="valores()" value="Resultado">
+                <p>
+    
+                </p>
+                <input id="z" type="text"><br><br>
+    
+            </form>
+        </div>
+        <script>
+            function valores(numero1,numero2,numero3)
+            {
+                var A = parseFloat(document.getElementById('numero1').value);    
+                var B = parseFloat(document.getElementById('numero2').value);
+                var C = parseFloat(document.getElementById('numero3').value);
+                var x = (B);
+                var error = ("ERROR NUMEROS IGUALES");
+                if (A!=B)
+                {
+                    document.getElementById("z").value = x;
+                }
+                if (C!=B)
+                {
+                    document.getElementById("z").value = x;
+                }else{
+                    document.getElementById("z").value = error;
+                }
+            }
+        </script>
+        
+        <div class="contenedor">
+            <center><h2>EJERCICIO 3</h2></center>
+            <form action="">
+                <input id="n" type="text">
+                <p>Obtener el factorial</p>
+                <p>=</p>
+                <input id="total" type="text" readonly>
+                <input type="button" class="btn" onclick="factorial()" value="Resultado">
+            </form>
+        </div>
+        <script>
+        function factorial(){
+            var numero=document.getElementById('n').value;
+            var resultado=1;
+            for(var i=1; i<=numero; i++){
+                resultado=resultado*i;
+            }
+            document.getElementById('total').value=resultado;
+        }   
+        </script>
+    </div>
+</body>
+</html>
